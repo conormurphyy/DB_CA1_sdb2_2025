@@ -1,0 +1,49 @@
+//UNF Table
+erDiagram
+    Powerlifting_Gym_Database {
+        int Member_ID PK
+        string Name
+        int Age
+        string Gender
+        string Weight_Class
+        string Age_Class
+        string Medical_Information
+        string Injury_History
+        int Coach_ID FK
+        int Membership_ID FK
+        int Squat_PB
+        int Bench_PB
+        int Deadlift_PB
+        int Coach_ID PK
+        string Name
+        string Expertise
+        int Years_Experience
+        float Price
+        string Personal_Info
+        int Membership_ID PK
+        string Type
+        float Price
+        int Equipment_ID PK
+        string Type
+        string Brand
+        float Price
+        date Next_Maintenance_DUE
+        int Staff_ID PK
+        string Name
+        string Speciality
+        int Usage_ID PK
+        int Member_ID FK
+        int Equipment_ID FK
+        date Date_Last_Used
+        int Competition_ID PK
+        string Name
+        date Date
+        string Location
+        int Member_ID FK
+        int Competition_ID FK
+        int Coach_ID FK
+        int Placement
+        float Dots_Score
+    }
+    
+    
