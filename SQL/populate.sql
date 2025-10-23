@@ -87,7 +87,7 @@ VALUES
 (3, 'Spring Open', '2026-03-05', 'Galway'),
 (4, 'Summer Championships', '2026-06-20', 'Limerick'),
 (5, 'Open Nationals', '2026-08-10', 'Belfast'),
-(6, 'Masters Nationals' '2026-04-23', 'Tip');
+(6, 'Masters Nationals', '2026-04-23', 'Tip');
 
 INSERT INTO COMPETITION_PARTICIPANTS (Member_ID, Competition_ID, Coach_ID, Placement, Dots_Score)
  VALUES
