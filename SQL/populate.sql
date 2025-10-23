@@ -72,13 +72,7 @@ INSERT INTO MAINTENANCE_DOCUMENTS (Maintenance_Doc_ID, Equipment_ID, Maintenance
 (4, 40, 4, '2025-10-01', '2026-04-01', 'Rogue Adjustable Bench cleaned'),
 (5, 5, 5, '2025-10-10', '2026-04-10', 'Eleiko 25KG Plate set cleaned and checked for damage.');
 
-INSERT INTO EQUIPMENT_USAGE (Usage_ID, Member_ID, Equipment_ID, Date_Last_Used) 
-VALUES
-(1, 1, 1, '2025-10-20'),
-(2, 2, 4, '2025-10-19'),
-(3, 3, 32, '2025-10-18'),
-(4, 1, 5, '2025-10-17'),
-(5, 2, 40, '2025-10-16');
+
 
 INSERT INTO COMPETITIONS (Competition_ID, Name, Date, Location)
 VALUES
@@ -178,3 +172,10 @@ VALUES
 (5, 5, 'Squat', 260.0, '2025-02-11'),
 (5, 5, 'Bench Press', 175.0, '2025-03-04'),
 (5, 5, 'Deadlift', 300.0, '2025-04-19');
+INSERT INTO EQUIPMENT_USAGE (Usage_ID, Member_ID, Equipment_ID, Date_Last_Used) 
+VALUES
+(1, 1, 1, '2025-10-20'),
+(2, 2, 4, '2025-10-19'),
+(3, 3, 32, '2025-10-18'),
+(4, 1, 5, '2025-10-17'),
+(5, 2, 40, '2025-10-16');
