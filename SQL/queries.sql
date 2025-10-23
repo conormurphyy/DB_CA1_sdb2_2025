@@ -1,4 +1,4 @@
--- SQL Delete
+-- SQL Delete Query
 
 -- No assigned coaches & aren't in competition records
 DELETE FROM MEMBERS
