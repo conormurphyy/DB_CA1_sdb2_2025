@@ -70,7 +70,7 @@ INSERT INTO MAINTENANCE_DOCUMENTS (Maintenance_Doc_ID, Equipment_ID, Maintenance
 (2, 4, 2, '2025-08-15', '2026-02-15', 'Combo-Rack hydraulics checked and lubricated.'),
 (3, 32, 3, '2025-07-20', '2026-01-20', 'Strength Shop Power Cage safety pins replaced.'),
 (4, 40, 4, '2025-10-01', '2026-04-01', 'Rogue Adjustable Bench cleaned'),
-(5, 5, 5, '2025-10-10', '2026-04-10', 'Eleiko 25KG Plate set cleaned and inspected for damage.');
+(5, 5, 5, '2025-10-10', '2026-04-10', 'Eleiko 25KG Plate set cleaned and checked for damage.');
 
 INSERT INTO EQUIPMENT_USAGE (Usage_ID, Member_ID, Equipment_ID, Date_Last_Used) 
 VALUES
@@ -87,7 +87,7 @@ VALUES
 (3, 'Spring Open', '2026-03-05', 'Galway'),
 (4, 'Summer Championships', '2026-06-20', 'Limerick'),
 (5, 'Open Nationals', '2026-08-10', 'Belfast'),
-(6, 'Masters Nationals' '2026-04-23');
+(6, 'Masters Nationals' '2026-04-23', 'Tip');
 
 INSERT INTO COMPETITION_PARTICIPANTS (Member_ID, Competition_ID, Coach_ID, Placement, Dots_Score)
  VALUES
