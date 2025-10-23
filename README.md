@@ -1,5 +1,8 @@
 <h1>Powerlifting Gym Database</h1>
 
+<h2><bold>Repositry Structure</bold></h2>
+
+
 <h2>Idea</h2>
 <p>
 The Powerlifting Gym Database is designed to manage coaches, members, equipment, equipment usage and competitions within the gym. It is important that we prioritise every essential part of managing and running a powerlifting gym into one organised and efficient process.
