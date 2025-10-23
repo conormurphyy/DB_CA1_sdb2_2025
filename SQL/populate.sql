@@ -83,13 +83,7 @@ VALUES
 (5, 'Open Nationals', '2026-08-10', 'Belfast'),
 (6, 'Masters Nationals', '2026-04-23', 'Tip');
 
-INSERT INTO COMPETITION_PARTICIPANTS (Member_ID, Competition_ID, Coach_ID, Placement, Dots_Score)
- VALUES
-(1, 1, 1, 1, 450.20),
-(2, 1, 2, 2, 432.10),
-(3, 2, 1, 3, 410.00),
-(4, 3, 3, 1, 455.90),
-(5, 4, 2, 2, 400.50);
+
 
 INSERT INTO WEIGHT_CLASSES (Weight_Class_ID, Weight_Class_Name, Min_Weight, Max_Weight)
 VALUES
@@ -179,3 +173,10 @@ VALUES
 (3, 3, 32, '2025-10-18'),
 (4, 1, 5, '2025-10-17'),
 (5, 2, 40, '2025-10-16');
+INSERT INTO COMPETITION_PARTICIPANTS (Member_ID, Competition_ID, Coach_ID, Placement, Dots_Score)
+ VALUES
+(1, 1, 1, 1, 450.20),
+(2, 1, 2, 2, 432.10),
+(3, 2, 1, 3, 410.00),
+(4, 3, 3, 1, 455.90),
+(5, 4, 2, 2, 400.50);
