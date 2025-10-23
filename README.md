@@ -1,11 +1,3 @@
-<style>
-  h1 {
-    color: blue;
-  }
-</style>
-
-
-
 
 <h1>Powerlifting Gym Database</h1>
 
