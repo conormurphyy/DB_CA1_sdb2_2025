@@ -97,28 +97,30 @@ INSERT INTO COMPETITION_PARTICIPANTS (Member_ID, Competition_ID, Coach_ID, Place
 (4, 3, 3, 1, 455.90),
 (5, 4, 2, 2, 400.50);
 
-INSERT INTO WEIGHT_CLASSES (Weight_Class_Name, Min_Weight, Max_Weight)
+INSERT INTO WEIGHT_CLASSES (Weight_Class_ID, Weight_Class_Name, Min_Weight, Max_Weight)
 VALUES
-('Under 59kg', 0.0, 58.9),
-('59kg–66kg', 59.0, 65.9),
-('66kg–74kg', 66.0, 73.9),
-('74kg–83kg', 74.0, 82.9),
-('83kg–93kg', 83.0, 92.9),
-('93kg–105kg', 93.0, 104.9),
-('105kg–120kg', 105.0, 119.9),
-('120kg+', 120.0, 999.9);
+(1, 'Under 59kg', 0.0, 58.9),
+(2, '59kg–66kg', 59.0, 65.9),
+(3, '66kg–74kg', 66.0, 73.9),
+(4, '74kg–83kg', 74.0, 82.9),
+(5, '83kg–93kg', 83.0, 92.9),
+(6, '93kg–105kg', 93.0, 104.9),
+(7, '105kg–120kg', 105.0, 119.9),
+(8, '120kg+', 120.0, 999.9);
 
-INSERT INTO AGE_CLASSES (Age_Class_Name, Min_Age, Max_Age)
+
+INSERT INTO AGE_CLASSES (Age_Class_ID, Age_Class_Name, Min_Age, Max_Age)
 VALUES
-('Teen 1', 13, 15),
-('Teen 2', 16, 17),
-('Teen 3', 18, 19),
-('Junior', 20, 23),
-('Open', 24, 39),
-('Masters I', 40, 49),
-('Masters II', 50, 59),
-('Masters III', 60, 69),
-('Masters IV', 70, 79);
+(1, 'Teen 1', 13, 15),
+(2, 'Teen 2', 16, 17),
+(3, 'Teen 3', 18, 19),
+(4, 'Junior', 20, 23),
+(5, 'Open', 24, 39),
+(6, 'Masters I', 40, 49),
+(7, 'Masters II', 50, 59),
+(8, 'Masters III', 60, 69),
+(9, 'Masters IV', 70, 79);
+
 
 INSERT INTO COACHES (Name, Expertise, Years_Experience, Price, Personal_Info)
 VALUES
@@ -129,23 +131,25 @@ VALUES
 ('Padraig Kelly', 'General Fitness', 4, 40.00, 'An up and coming coach focused on functional strength and beginner lifters');
 
 
-INSERT INTO MEMBERS (Membership_ID, Name, Weight_Class, Age_Class, Age, Weight, Medical_Information, Injury_History, Coach_ID, Weight_Class_ID, Age_Class_ID)
+INSERT INTO MEMBERS (Member_ID, Membership_ID, Name, Weight_Class, Age_Class, Age, Weight, Medical_Information, Injury_History, Coach_ID, Weight_Class_ID, Age_Class_ID)
 VALUES
-(1, 'Liam Connor', '74kg–83kg', 'Teen 3', 19, 81.5, 'None', 'Minor shoulder strain (2024)', 1, 4, 3),
-(2, 'Ava Byrne', '74kg–83kg', 'Junior', 22, 78.4, 'Mild asthma', 'None', 2, 4, 4),
-(3, 'Noah Kelly', '93kg–105kg', 'Open', 29, 98.2, 'None', 'Left knee surgery (2022)', 3, 6, 5),
-(4, 'Emma Walsh', '105kg–120kg', 'Masters I', 45, 109.7, 'None', 'Chronic lower back tightness', 4, 7, 6),
-(5, 'Ethan Murphy', '120kg+', 'Open', 34, 126.8, 'Hypertension (managed)', 'None', 5, 8, 5);
+(1, 1, 'Liam Connor', '74kg–83kg', 'Teen 3', 19, 81.5, 'None', 'Minor shoulder strain (2024)', 1, 4, 3),
+(2, 2, 'Ava Byrne', '74kg–83kg', 'Junior', 22, 78.4, 'Mild asthma', 'None', 2, 4, 4),
+(3, 3, 'Noah Kelly', '93kg–105kg', 'Open', 29, 98.2, 'None', 'Left knee surgery (2022)', 3, 6, 5),
+(4, 4, 'Emma Walsh', '105kg–120kg', 'Masters I', 45, 109.7, 'None', 'Chronic lower back tightness', 4, 7, 6),
+(5, 5, 'Ethan Murphy', '120kg+', 'Open', 34, 126.8, 'Hypertension (managed)', 'None', 5, 8, 5);
 
 
-INSERT INTO COACH_TO_MEMBER_ASSIGNMENT (Coach_ID, Member_ID)
+
+INSERT INTO COACH_TO_MEMBER_ASSIGNMENT (Assignment_ID, Coach_ID, Member_ID)
 VALUES
-(1, 1),
-(1, 3),
-(2, 2),
-(3, 3),
-(4, 4),
-(5, 5);
+(1, 1, 1),
+(2, 1, 3),
+(3, 2, 2),
+(4, 3, 3),
+(5, 4, 4),
+(6, 5, 5);
+
 
 
 INSERT INTO MEMBER_PERSONAL_BESTS (Member_ID, Coach_ID, Type, Weight_Lifted, Date_Of_Lift)
