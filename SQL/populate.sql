@@ -31,13 +31,15 @@ VALUES
 (7, 'Masters II', 50, 59),
 (8, 'Masters III', 60, 69),
 (9, 'Masters IV', 70, 79);
-INSERT INTO COACHES (Name, Expertise, Years_Experience, Price, Personal_Info)
+INSERT INTO COACHES (Coach_ID, Name, Expertise, Years_Experience, Price, Personal_Info)
 VALUES
-('Sean Reilly', 'Powerlifting', 11, 60.00, 'Former IrishPF national medalist, he is known for squat coaching'),
-('Aoife Murphy', 'Strength & Conditioning', 7, 55.00, 'Certified coach with a background in sports science from DCU'),
-('Cian Gallagher', 'Olympic Lifting', 9, 65.00, 'Competed in Irish Weightlifting Nationals'),
-('Niamh Byrne', 'Rehabilitation', 6, 50.00, 'Qualified physiotherapist specialising in post injury strength work'),
-('Padraig Kelly', 'General Fitness', 4, 40.00, 'An up and coming coach focused on functional strength and beginner lifters');
+(1, 'Sean Reilly', 'Powerlifting', 11, 60.00, 'Former IrishPF national medalist, he is known for squat coaching'),
+(2, 'Aoife Murphy', 'Strength & Conditioning', 7, 55.00, 'Certified coach with a background in sports science from DCU'),
+(3, 'Cian Gallagher', 'Olympic Lifting', 9, 65.00, 'Competed in Irish Weightlifting Nationals'),
+(4, 'Niamh Byrne', 'Rehabilitation', 6, 50.00, 'Qualified physiotherapist specialising in post injury strength work'),
+(5, 'Padraig Kelly', 'General Fitness', 4, 40.00, 'An up and coming coach focused on functional strength and beginner lifters');
+
+
 INSERT INTO MEMBERS (Member_ID, Membership_ID, Name, Weight_Class, Age_Class, Age, Weight, Medical_Information, Injury_History, Coach_ID, Weight_Class_ID, Age_Class_ID)
 VALUES
 (1, 1, 'Liam Connor', '74kg–83kg', 'Teen 3', 19, 81.5, 'None', 'Minor shoulder strain (2024)', 1, 4, 3),
