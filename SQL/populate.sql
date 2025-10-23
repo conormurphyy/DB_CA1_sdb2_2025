@@ -9,7 +9,7 @@ VALUES
 (5, 'Monthy', 40.99),
 (6, 'Every 6 Months', 220.99),
 (7, 'Anually', 400.99),
-(8, 'Day Pass', 6.99),
+(8, 'Day Pass', 6.99);
 
 INSERT INTO EQUIPTMENT (Equiptment_ID, Type, Brand, Price) 
 VALUES
