@@ -1,3 +1,16 @@
+
+INSERT INTO MEMBERSHIP_TYPE (Membership_ID,Type,Price)
+VALUES
+(1, 'Monthly', 44.99),
+(2, 'Every 6 Months', 249.99),
+(3, 'Anually', 449.99),
+(4, 'Day Pass', 7.99),
+-- student rates
+(5, 'Monthly', 40.99),
+(6, 'Every 6 Months', 220.99),
+(7, 'Anually', 400.99),
+(8, 'Day Pass', 6.99);
+
 INSERT INTO WEIGHT_CLASSES (Weight_Class_ID, Weight_Class_Name, Min_Weight, Max_Weight)
 VALUES
 (1, 'Under 59kg', 0.0, 58.9),
