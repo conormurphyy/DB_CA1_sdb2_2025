@@ -1,6 +1,6 @@
-INSERT INTO MEMBERSHIP_TYPE (Member_ID,Type,Price)
+INSERT INTO MEMBERSHIP_TYPE (Membership_ID,Type,Price)
 VALUES
---normal rates
+
 (1, 'Monthly', 44.99),
 (2, 'Every 6 Months', 249.99),
 (3, 'Anually', 449.99),
