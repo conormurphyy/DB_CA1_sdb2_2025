@@ -1,15 +1,3 @@
-INSERT INTO MEMBERSHIP_TYPE (Membership_ID,Type,Price)
-VALUES
-
-(1, 'Monthly', 44.99),
-(2, 'Every 6 Months', 249.99),
-(3, 'Anually', 449.99),
-(4, 'Day Pass', 7.99),
--- student rates
-(5, 'Monthly', 40.99),
-(6, 'Every 6 Months', 220.99),
-(7, 'Anually', 400.99),
-(8, 'Day Pass', 6.99);
 INSERT INTO WEIGHT_CLASSES (Weight_Class_ID, Weight_Class_Name, Min_Weight, Max_Weight)
 VALUES
 (1, 'Under 59kg', 0.0, 58.9),
@@ -20,6 +8,7 @@ VALUES
 (6, '93kg–105kg', 93.0, 104.9),
 (7, '105kg–120kg', 105.0, 119.9),
 (8, '120kg+', 120.0, 999.9);
+
 INSERT INTO AGE_CLASSES (Age_Class_ID, Age_Class_Name, Min_Age, Max_Age)
 VALUES
 (1, 'Teen 1', 13, 15),
@@ -31,6 +20,7 @@ VALUES
 (7, 'Masters II', 50, 59),
 (8, 'Masters III', 60, 69),
 (9, 'Masters IV', 70, 79);
+
 INSERT INTO COACHES (Coach_ID, Name, Expertise, Years_Experience, Price, Personal_Info)
 VALUES
 (1, 'Sean Reilly', 'Powerlifting', 11, 60.00, 'Former IrishPF national medalist, he is known for squat coaching'),
@@ -39,7 +29,6 @@ VALUES
 (4, 'Niamh Byrne', 'Rehabilitation', 6, 50.00, 'Qualified physiotherapist specialising in post injury strength work'),
 (5, 'Padraig Kelly', 'General Fitness', 4, 40.00, 'An up and coming coach focused on functional strength and beginner lifters');
 
-
 INSERT INTO MEMBERS (Member_ID, Membership_ID, Name, Weight_Class, Age_Class, Age, Weight, Medical_Information, Injury_History, Coach_ID, Weight_Class_ID, Age_Class_ID)
 VALUES
 (1, 1, 'Liam Connor', '74kg–83kg', 'Teen 3', 19, 81.5, 'None', 'Minor shoulder strain (2024)', 1, 4, 3),
@@ -47,6 +36,7 @@ VALUES
 (3, 3, 'Noah Kelly', '93kg–105kg', 'Open', 29, 98.2, 'None', 'Left knee surgery (2022)', 3, 6, 5),
 (4, 4, 'Emma Walsh', '105kg–120kg', 'Masters I', 45, 109.7, 'None', 'Chronic lower back tightness', 4, 7, 6),
 (5, 5, 'Ethan Murphy', '120kg+', 'Open', 34, 126.8, 'Hypertension (managed)', 'None', 5, 8, 5);
+
 INSERT INTO COACH_TO_MEMBER_ASSIGNMENT (Assignment_ID, Coach_ID, Member_ID)
 VALUES
 (1, 1, 1),
@@ -110,7 +100,8 @@ VALUES
 (4, 'Vincent Murphy', 'Cleaning'),
 (5, 'Michael Orji', 'General Maintenance');
 
-INSERT INTO MAINTENANCE_DOCUMENTS (Maintenance_Doc_ID, Equipment_ID, Maintenance_Staff_ID, Last_Maintenance, Next_Maintenance, Maintenance_Notes) VALUES
+INSERT INTO MAINTENANCE_DOCUMENTS (Maintenance_Doc_ID, Equipment_ID, Maintenance_Staff_ID, Last_Maintenance, Next_Maintenance, Maintenance_Notes) 
+VALUES
 (1, 1, 1, '2025-09-01', '2026-03-01', 'Power-Bar calibration completed. All bolts tightened.'),
 (2, 4, 2, '2025-08-15', '2026-02-15', 'Combo-Rack hydraulics checked and lubricated.'),
 (3, 32, 3, '2025-07-20', '2026-01-20', 'Strength Shop Power Cage safety pins replaced.'),
@@ -122,8 +113,7 @@ VALUES
 (1, 1, 1, '2025-10-20'),
 (2, 2, 4, '2025-10-19'),
 (3, 3, 32, '2025-10-18'),
-(4, 1, 5, '2025-10-17'),
-
+(4, 1, 5, '2025-10-17');
 
 INSERT INTO COMPETITIONS (Competition_ID, Name, Date, Location)
 VALUES
@@ -134,24 +124,13 @@ VALUES
 (5, 'Open Nationals', '2026-08-10', 'Belfast'),
 (6, 'Masters Nationals', '2026-04-23', 'Tip');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-INSERT INTO COMPETITION_PARTICIPANTS (Member_ID, Competition_ID, Coach_ID, Placement, Dots_Score) VALUES (1, 1, 1, 1, 450.20), (2, 1, 2, 2, 432.10), (3, 2, 1, 3, 410.00), (4, 3, 3, 1, 455.90), (5, 4, 2, 2, 400.50);
-
+INSERT INTO COMPETITION_PARTICIPANTS (Member_ID, Competition_ID, Coach_ID, Placement, Dots_Score) 
+VALUES
+(1, 1, 1, 1, 450.20),
+(2, 1, 2, 2, 432.10),
+(3, 2, 1, 3, 410.00),
+(4, 3, 3, 1, 455.90),
+(5, 4, 2, 2, 400.50);
 
 INSERT INTO MEMBER_PERSONAL_BESTS (Member_ID, Coach_ID, Type, Weight_Lifted, Date_Of_Lift)
 VALUES
@@ -179,5 +158,3 @@ VALUES
 (5, 5, 'Squat', 260.0, '2025-02-11'),
 (5, 5, 'Bench Press', 175.0, '2025-03-04'),
 (5, 5, 'Deadlift', 300.0, '2025-04-19');
-
-
