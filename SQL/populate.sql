@@ -10,6 +10,49 @@ VALUES
 (6, 'Every 6 Months', 220.99),
 (7, 'Anually', 400.99),
 (8, 'Day Pass', 6.99);
+INSERT INTO WEIGHT_CLASSES (Weight_Class_ID, Weight_Class_Name, Min_Weight, Max_Weight)
+VALUES
+(1, 'Under 59kg', 0.0, 58.9),
+(2, '59kg–66kg', 59.0, 65.9),
+(3, '66kg–74kg', 66.0, 73.9),
+(4, '74kg–83kg', 74.0, 82.9),
+(5, '83kg–93kg', 83.0, 92.9),
+(6, '93kg–105kg', 93.0, 104.9),
+(7, '105kg–120kg', 105.0, 119.9),
+(8, '120kg+', 120.0, 999.9);
+INSERT INTO AGE_CLASSES (Age_Class_ID, Age_Class_Name, Min_Age, Max_Age)
+VALUES
+(1, 'Teen 1', 13, 15),
+(2, 'Teen 2', 16, 17),
+(3, 'Teen 3', 18, 19),
+(4, 'Junior', 20, 23),
+(5, 'Open', 24, 39),
+(6, 'Masters I', 40, 49),
+(7, 'Masters II', 50, 59),
+(8, 'Masters III', 60, 69),
+(9, 'Masters IV', 70, 79);
+INSERT INTO COACHES (Name, Expertise, Years_Experience, Price, Personal_Info)
+VALUES
+('Sean Reilly', 'Powerlifting', 11, 60.00, 'Former IrishPF national medalist, he is known for squat coaching'),
+('Aoife Murphy', 'Strength & Conditioning', 7, 55.00, 'Certified coach with a background in sports science from DCU'),
+('Cian Gallagher', 'Olympic Lifting', 9, 65.00, 'Competed in Irish Weightlifting Nationals'),
+('Niamh Byrne', 'Rehabilitation', 6, 50.00, 'Qualified physiotherapist specialising in post injury strength work'),
+('Padraig Kelly', 'General Fitness', 4, 40.00, 'An up and coming coach focused on functional strength and beginner lifters');
+INSERT INTO MEMBERS (Member_ID, Membership_ID, Name, Weight_Class, Age_Class, Age, Weight, Medical_Information, Injury_History, Coach_ID, Weight_Class_ID, Age_Class_ID)
+VALUES
+(1, 1, 'Liam Connor', '74kg–83kg', 'Teen 3', 19, 81.5, 'None', 'Minor shoulder strain (2024)', 1, 4, 3),
+(2, 2, 'Ava Byrne', '74kg–83kg', 'Junior', 22, 78.4, 'Mild asthma', 'None', 2, 4, 4),
+(3, 3, 'Noah Kelly', '93kg–105kg', 'Open', 29, 98.2, 'None', 'Left knee surgery (2022)', 3, 6, 5),
+(4, 4, 'Emma Walsh', '105kg–120kg', 'Masters I', 45, 109.7, 'None', 'Chronic lower back tightness', 4, 7, 6),
+(5, 5, 'Ethan Murphy', '120kg+', 'Open', 34, 126.8, 'Hypertension (managed)', 'None', 5, 8, 5);
+INSERT INTO COACH_TO_MEMBER_ASSIGNMENT (Assignment_ID, Coach_ID, Member_ID)
+VALUES
+(1, 1, 1),
+(2, 1, 3),
+(3, 2, 2),
+(4, 3, 3),
+(5, 4, 4),
+(6, 5, 5);
 
 INSERT INTO EQUIPMENT (Equipment_ID, Type, Brand, Price) 
 VALUES
@@ -72,6 +115,12 @@ INSERT INTO MAINTENANCE_DOCUMENTS (Maintenance_Doc_ID, Equipment_ID, Maintenance
 (4, 40, 4, '2025-10-01', '2026-04-01', 'Rogue Adjustable Bench cleaned'),
 (5, 5, 5, '2025-10-10', '2026-04-10', 'Eleiko 25KG Plate set cleaned and checked for damage.');
 
+INSERT INTO EQUIPMENT_USAGE (Usage_ID, Member_ID, Equipment_ID, Date_Last_Used) 
+VALUES
+(1, 1, 1, '2025-10-20'),
+(2, 2, 4, '2025-10-19'),
+(3, 3, 32, '2025-10-18'),
+(4, 1, 5, '2025-10-17'),
 
 
 INSERT INTO COMPETITIONS (Competition_ID, Name, Date, Location)
@@ -85,58 +134,20 @@ VALUES
 
 
 
-INSERT INTO WEIGHT_CLASSES (Weight_Class_ID, Weight_Class_Name, Min_Weight, Max_Weight)
-VALUES
-(1, 'Under 59kg', 0.0, 58.9),
-(2, '59kg–66kg', 59.0, 65.9),
-(3, '66kg–74kg', 66.0, 73.9),
-(4, '74kg–83kg', 74.0, 82.9),
-(5, '83kg–93kg', 83.0, 92.9),
-(6, '93kg–105kg', 93.0, 104.9),
-(7, '105kg–120kg', 105.0, 119.9),
-(8, '120kg+', 120.0, 999.9);
-
-
-INSERT INTO AGE_CLASSES (Age_Class_ID, Age_Class_Name, Min_Age, Max_Age)
-VALUES
-(1, 'Teen 1', 13, 15),
-(2, 'Teen 2', 16, 17),
-(3, 'Teen 3', 18, 19),
-(4, 'Junior', 20, 23),
-(5, 'Open', 24, 39),
-(6, 'Masters I', 40, 49),
-(7, 'Masters II', 50, 59),
-(8, 'Masters III', 60, 69),
-(9, 'Masters IV', 70, 79);
-
-
-INSERT INTO COACHES (Name, Expertise, Years_Experience, Price, Personal_Info)
-VALUES
-('Sean Reilly', 'Powerlifting', 11, 60.00, 'Former IrishPF national medalist, he is known for squat coaching'),
-('Aoife Murphy', 'Strength & Conditioning', 7, 55.00, 'Certified coach with a background in sports science from DCU'),
-('Cian Gallagher', 'Olympic Lifting', 9, 65.00, 'Competed in Irish Weightlifting Nationals'),
-('Niamh Byrne', 'Rehabilitation', 6, 50.00, 'Qualified physiotherapist specialising in post injury strength work'),
-('Padraig Kelly', 'General Fitness', 4, 40.00, 'An up and coming coach focused on functional strength and beginner lifters');
-
-
-INSERT INTO MEMBERS (Member_ID, Membership_ID, Name, Weight_Class, Age_Class, Age, Weight, Medical_Information, Injury_History, Coach_ID, Weight_Class_ID, Age_Class_ID)
-VALUES
-(1, 1, 'Liam Connor', '74kg–83kg', 'Teen 3', 19, 81.5, 'None', 'Minor shoulder strain (2024)', 1, 4, 3),
-(2, 2, 'Ava Byrne', '74kg–83kg', 'Junior', 22, 78.4, 'Mild asthma', 'None', 2, 4, 4),
-(3, 3, 'Noah Kelly', '93kg–105kg', 'Open', 29, 98.2, 'None', 'Left knee surgery (2022)', 3, 6, 5),
-(4, 4, 'Emma Walsh', '105kg–120kg', 'Masters I', 45, 109.7, 'None', 'Chronic lower back tightness', 4, 7, 6),
-(5, 5, 'Ethan Murphy', '120kg+', 'Open', 34, 126.8, 'Hypertension (managed)', 'None', 5, 8, 5);
 
 
 
-INSERT INTO COACH_TO_MEMBER_ASSIGNMENT (Assignment_ID, Coach_ID, Member_ID)
-VALUES
-(1, 1, 1),
-(2, 1, 3),
-(3, 2, 2),
-(4, 3, 3),
-(5, 4, 4),
-(6, 5, 5);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -166,17 +177,5 @@ VALUES
 (5, 5, 'Squat', 260.0, '2025-02-11'),
 (5, 5, 'Bench Press', 175.0, '2025-03-04'),
 (5, 5, 'Deadlift', 300.0, '2025-04-19');
-INSERT INTO EQUIPMENT_USAGE (Usage_ID, Member_ID, Equipment_ID, Date_Last_Used) 
-VALUES
-(1, 1, 1, '2025-10-20'),
-(2, 2, 4, '2025-10-19'),
-(3, 3, 32, '2025-10-18'),
-(4, 1, 5, '2025-10-17'),
-(5, 2, 40, '2025-10-16');
-INSERT INTO COMPETITION_PARTICIPANTS (Member_ID, Competition_ID, Coach_ID, Placement, Dots_Score)
- VALUES
-(1, 1, 1, 1, 450.20),
-(2, 1, 2, 2, 432.10),
-(3, 2, 1, 3, 410.00),
-(4, 3, 3, 1, 455.90),
-(5, 4, 2, 2, 400.50);
+
+
