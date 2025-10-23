@@ -11,7 +11,7 @@ VALUES
 (7, 'Anually', 400.99),
 (8, 'Day Pass', 6.99);
 
-INSERT INTO EQUIPMENT (Equiptment_ID, Type, Brand, Price) 
+INSERT INTO EQUIPMENT (Equipment_ID, Type, Brand, Price) 
 VALUES
 (1, 'Power-Bar', 'Eleiko', 1100.00),
 (2, 'Power-Bar', 'Rogue', 405.00),
