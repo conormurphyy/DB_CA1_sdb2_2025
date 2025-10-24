@@ -1,5 +1,5 @@
 
-<h1>Powerlifting Gym Database</h1>
+##Powerlifting Gym Database
 
 <h2><bold>Repositry Structure</bold></h2>
 ```
