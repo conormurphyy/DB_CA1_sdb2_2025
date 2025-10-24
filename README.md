@@ -3,7 +3,7 @@
 
 ## Repositry Structure
 ```text
-  \---DB_CA1_sdb2_2025-main
+\---DB_CA1_sdb2_2025-main
     |   README.md
     |
     +---Normalisation
@@ -13,9 +13,19 @@
     |       UNF
     |
     \---SQL
-            populate.sql
-            queries.sql
-            schema.sql
+        |  
+        |   
+        |   
+        |
+        +---DB_Connectivity
+        |       populate.sql
+        |       queries.sql
+        |
+        +---Tables
+        |       schema.sql
+        |
+        \---Triggers
+                triggers.sql
 ```
 ## Idea
 
