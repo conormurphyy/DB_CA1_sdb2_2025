@@ -2,19 +2,22 @@
 <h1>Powerlifting Gym Database</h1>
 
 <h2><bold>Repositry Structure</bold></h2>
-```
-DB_CA1_sdb2_2025-main
-├── README.md
-├── Normalisation
-│ ├── 1NF
-│ ├── 2NF
-│ ├── 3NF
-│ └── UNF
-└── SQL
-├── populate.sql
-├── queries.sql
-└── schema.sql
-```
+
+<pre><code>
+  \---DB_CA1_sdb2_2025-main
+    |   README.md
+    |
+    +---Normalisation
+    |       1NF
+    |       2NF
+    |       3NF
+    |       UNF
+    |
+    \---SQL
+            populate.sql
+            queries.sql
+            schema.sql
+</code></pre>
 <h2>Idea</h2>
 
 <p>
