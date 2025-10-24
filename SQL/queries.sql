@@ -47,8 +47,9 @@ UPDATE MAINTENANCE_DOCUMENTS SET Last_Maintenance = CURDATE(), Maintenance_Notes
 --records the updated date for the 'spring open'
 UPDATE competitions SET Date ='2026-03-20' where name = 'Spring Open';
 
---Applys discount to membership for selected members
-UPDATE MEMBERSHIP_TYPE SET Price = Price * 0.90 WHERE Membership_ID BETWEEN 6 AND 8;
+--Applys discount to membership for winners of competitions
+UPDATE membership_type SET Price = Price *0.95 WHERE membership_id IN ( SELECT Membership_id FROM members WHERE member_id IN( select member_ID FROM competition_participants WHERE placement =1 ) );
+
 
 -- SQL Delete Query
 -- No assigned coaches & aren't in competition records
