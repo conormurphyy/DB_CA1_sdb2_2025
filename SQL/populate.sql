@@ -38,7 +38,7 @@ INSERT INTO COACHES (Coach_ID, Name, Expertise, Years_Experience, Price, Persona
 VALUES
 (1, 'Sean Reilly', 'Powerlifting', 11, 60.00, 'Former IrishPF national medalist, he is known for squat coaching'),
 (2, 'Aoife Murphy', 'Strength & Conditioning', 7, 55.00, 'Certified coach with a background in sports science from DCU'),
-(3, 'Cian Gallagher', 'Olympic Lifting', 9, 65.00, 'Competed in Irish Weightlifting Nationals'),
+(3, 'Cian Gallagher', 'Nutrition', 9, 65.00, 'Competed in Irish Weightlifting Nationals'),
 (4, 'Niamh Byrne', 'Rehabilitation', 6, 50.00, 'Qualified physiotherapist specialising in post injury strength work'),
 (5, 'Padraig Kelly', 'General Fitness', 4, 40.00, 'An up and coming coach focused on functional strength and beginner lifters');
 
