@@ -36,3 +36,18 @@ UPDATE competitions SET Date ='2026-03-20' where name = 'Spring Open';
 
 --Applys discount to membership for selected members
 UPDATE MEMBERSHIP_TYPE SET Price = Price * 0.90 WHERE Membership_ID BETWEEN 6 AND 8;
+
+-- Read Query 
+-- joins three tables: members, coaches, and membership_type
+-- shows each member’s coach, expertise, and membership plan with price
+SELECT 
+    member.name AS member_name, 
+    coach.name AS coach_name, 
+    coach.expertise AS coach_expertise, 
+    mtype.type AS membership_type, 
+    mtype.price AS membership_price
+FROM members member
+JOIN coaches coach ON member.coach_id = coach.coach_id
+JOIN membership_type mtype on member.membership_id = mtype.membership_id
+ORDER BY member.member_id;
+
