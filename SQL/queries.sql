@@ -48,6 +48,6 @@ SELECT
     mtype.price AS membership_price
 FROM members member
 JOIN coaches coach ON member.coach_id = coach.coach_id
-JOIN membership_type mtype on member.membership_id = mtype.membership_id
+JOIN membership_types mtype on member.membership_id = mtype.membership_id
 ORDER BY member.member_id;
 
