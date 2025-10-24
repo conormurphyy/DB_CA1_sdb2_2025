@@ -64,8 +64,8 @@ WHERE Coach_ID IS NULL
 DELETE FROM COACHES
 WHERE Years_Experience < 2;
 
---Delete participants who DNF
+--Delete participants who were the last three
 DELETE FROM COMPETITION_PARTICIPANTS
-WHERE PLACEMENT IS NULL;
-
+ORDER BY Placement DESC
+LIMIT 3;
 
