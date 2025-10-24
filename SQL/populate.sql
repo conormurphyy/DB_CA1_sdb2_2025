@@ -139,11 +139,11 @@ VALUES
 
 INSERT INTO COMPETITION_PARTICIPANTS (Member_ID, Competition_ID, Coach_ID, Placement, Dots_Score) 
 VALUES
-(1, 1, 1, 1, 450.20),
-(2, 1, 2, 2, 432.10),
-(3, 2, 1, 3, 410.00),
-(4, 3, 3, 1, 455.90),
-(5, 4, 2, 2, 400.50);
+(1, 1, 1, 1, null),
+(2, 1, 2, 2, null),
+(3, 2, 1, 3, null),
+(4, 3, 3, 1, null),
+(5, 4, 2, 2, null);
 
 INSERT INTO MEMBER_PERSONAL_BESTS (Member_ID, Coach_ID, Type, Weight_Lifted, Date_Of_Lift)
 VALUES
