@@ -1,5 +1,5 @@
 
-INSERT INTO MEMBERSHIP_TYPE (Membership_ID,Type,Price)
+INSERT INTO MEMBERSHIP_TYPES (Membership_ID,Type,Price)
 VALUES
 (1, 'Monthly', 44.99),
 (2, 'Every 6 Months', 249.99),
