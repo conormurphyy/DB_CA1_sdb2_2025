@@ -2,6 +2,7 @@
 <h1>Powerlifting Gym Database</h1>
 
 <h2><bold>Repositry Structure</bold></h2>
+```
 \---DB_CA1_sdb2_2025-main
     |   README.md
     |
@@ -15,7 +16,7 @@
             populate.sql
             queries.sql
             schema.sql
-
+```
 <h2>Idea</h2>
 
 <p>
