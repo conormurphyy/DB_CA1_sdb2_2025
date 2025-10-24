@@ -12,9 +12,7 @@
     |       3NF
     |       UNF
     |
-    \---SQL
-        |  
-        |   
+    \---SQL 
         |   
         |
         +---DB_Connectivity
