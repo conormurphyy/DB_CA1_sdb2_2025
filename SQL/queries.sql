@@ -2,7 +2,7 @@
 --List each competitor with their details, coach, weight class and placement.
 SELECT
   member.Name AS Member_Name,
-  memebership_type.Type AS Membership_Type,
+  membership_type.Type AS Membership_Type,
   membership_type.Price AS Membership_Price,
   coach.Name AS Coach_Name,
   weight_class.Weight_Class_Name AS Weight_Class,
@@ -10,12 +10,14 @@ SELECT
   member.Age,
   member.Weight,
   member.Medical_Information,
-  member.Injury_History
+  member.Injury_History,
+  competition_participants.Placement
 FROM MEMBERS member
-JOIN MEMBERSHIP_TYPES membership_type ON member.Membership_ID = memebership_type.Membership_ID
+JOIN MEMBERSHIP_TYPES membership_type ON member.Membership_ID = membership_type.Membership_ID
 JOIN COACHES coach ON member.Coach_ID = coach.Coach_ID
 JOIN WEIGHT_CLASSES weight_class ON member.Weight_Class_ID = weight_class.Weight_Class_ID
 JOIN AGE_CLASSES age_class ON member.Age_Class_ID = age_class.Age_Class_ID
+JOIN COMPETITION_PARTICIPANTS competition_participants ON member.Member_ID = competition_participants.Member_ID
 ORDER BY member.Member_ID;
 
 -- joins three tables: members, coaches, and membership_type
