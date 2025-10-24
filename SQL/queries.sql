@@ -62,7 +62,7 @@ WHERE Coach_ID IS NULL
 
 -- Delete for coaches with less than 2yr experience
 DELETE FROM COACHES
-WHERE Years_Exerperience < 2;
+WHERE Years_Experience < 2;
 
 --Delete participants who DNF
 DELETE FROM COMPETION_PARTICIPANTS
