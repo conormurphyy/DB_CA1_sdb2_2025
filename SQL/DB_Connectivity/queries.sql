@@ -50,7 +50,7 @@ UPDATE MAINTENANCE_DOCUMENTS SET Last_Maintenance = CURDATE(), Maintenance_Notes
 UPDATE competitions SET Date ='2026-03-20' where name = 'Spring Open';
 
 --Applys discount to membership for winners of competitions
-UPDATE membership_type SET Price = Price *0.95 WHERE membership_id IN ( SELECT Membership_id FROM members WHERE member_id IN( select member_ID FROM competition_participants WHERE placement =1 ) );
+UPDATE membership_types SET Price = Price *0.95 WHERE membership_id IN ( SELECT Membership_id FROM members WHERE member_id IN( select member_ID FROM competition_participants WHERE placement =1 ) );
 
 
 -- SQL Delete Query
