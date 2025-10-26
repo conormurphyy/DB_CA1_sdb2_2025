@@ -26,11 +26,11 @@ SELECT
     member.name AS member_name, 
     coach.name AS coach_name, 
     coach.expertise AS coach_expertise, 
-    mtype.type AS membership_type, 
-    mtype.price AS membership_price
+    membership_type.type AS membership_type, 
+    memebership_type.price AS membership_price
 FROM members member
 JOIN coaches coach ON member.coach_id = coach.coach_id
-JOIN membership_types mtype on member.membership_id = mtype.membership_id
+JOIN membership_types membership_type on member.membership_id = mtype.membership_id
 ORDER BY member.member_id;
 
 --Update Queries
