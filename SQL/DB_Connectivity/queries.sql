@@ -37,6 +37,8 @@ ORDER BY member.member_id;
 -- updates the member with id=2 's coach to be the coach at coach id =2
 UPDATE members SET Coach_ID =2 WHERE Member_ID=2;
 
+UPDATE members SET age=2 WHERE Member_ID=3;
+
 --IF member_id =3 , weight is gainned and moved up a class
 UPDATE members SET Weight = 103, Weight_Class ='93kg-105kg', Weight_Class_ID = 6 WHERE Member_ID =3;
 
