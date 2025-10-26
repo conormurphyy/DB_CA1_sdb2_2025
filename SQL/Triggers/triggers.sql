@@ -1,5 +1,6 @@
 -- Trigger doesn't allow people under the age of 13 to be able to become a member
 -- https://www.ibm.com/docs/en/db2/11.5.x?topic=statements-signal reference to signal sql state.
+DELIMITER $$
 CREATE TRIGGER check_age
 BEFORE INSERT ON MEMBERS
 FOR EACH ROW
@@ -9,7 +10,8 @@ BEGIN
         SIGNAL SQLSTATE '45000' 
         SET MESSAGE_TEXT = 'Member must be at least 13 years old.';
     END IF;
-END
+END%%
+DELIMITER ;
 
 
 -- Triggers auto logs if a new equipment is added
