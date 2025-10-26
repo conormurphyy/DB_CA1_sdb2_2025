@@ -1,5 +1,5 @@
 -- Trigger doesn't allow people under the age of 13 to be able to become a member
-DELIMITER $$
+
 
 CREATE TRIGGER check_age
 BEFORE INSERT ON MEMBERS
@@ -13,7 +13,7 @@ BEGIN
     END IF;
 END$$
 
-DELIMITER ;
+
 
 -- Triggers auto logs if a new equipment is added
 
