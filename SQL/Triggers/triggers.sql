@@ -10,7 +10,7 @@ BEGIN
         SIGNAL SQLSTATE '45000' 
         SET MESSAGE_TEXT = 'Member must be at least 13 years old.';
     END IF;
-END%%
+END$$
 DELIMITER ;
 
 
