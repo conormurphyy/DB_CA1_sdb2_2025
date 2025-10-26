@@ -48,3 +48,8 @@ AFTER INSERT ON EQUIPMENT
 FOR EACH ROW
   INSERT INTO equipment_log (equipment_id, `Type`, `Brand`, `Action`, inserted_at)
   VALUES (NEW.Equipment_ID, NEW.`Type`, NEW.`Brand`, 'added', NOW());
+
+-- to test trigger
+INSERT INTO EQUIPMENT (Equipment_ID, Type, Brand, Price)
+VALUES (1000, 'Test Bar', 'GymPro', 250.00);
+SELECT * FROM equipment_log;
