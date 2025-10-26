@@ -16,6 +16,8 @@ END$$
 DELIMITER ;
 
 -- Triggers auto logs if a new equipment is added
+
+-- creates a equipment addition log
 DROP TABLE IF EXISTS equipment_log;
 CREATE TABLE equipment_log (
   equipment_id INT,
@@ -24,6 +26,8 @@ CREATE TABLE equipment_log (
   `Action` VARCHAR(50),
   inserted_at DATETIME
 );
+
+--inserts the new data into the log for equipment
 DROP TRIGGER IF EXISTS after_equipment_insert;
 CREATE TRIGGER after_equipment_insert
 AFTER INSERT ON EQUIPMENT
