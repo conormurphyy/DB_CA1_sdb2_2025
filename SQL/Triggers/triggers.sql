@@ -14,3 +14,19 @@ BEGIN
 END$$
 
 DELIMITER ;
+
+-- Triggers auto logs if a new equipment is added
+DROP TABLE IF EXISTS equipment_log;
+CREATE TABLE equipment_log (
+  equipment_id INT,
+  `Type` VARCHAR(50),
+  `Brand` VARCHAR(50),
+  `Action` VARCHAR(50),
+  inserted_at DATETIME
+);
+DROP TRIGGER IF EXISTS after_equipment_insert;
+CREATE TRIGGER after_equipment_insert
+AFTER INSERT ON EQUIPMENT
+FOR EACH ROW
+  INSERT INTO equipment_log (equipment_id, `Type`, `Brand`, `Action`, inserted_at)
+  VALUES (NEW.Equipment_ID, NEW.`Type`, NEW.`Brand`, 'added', NOW());
